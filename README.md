@@ -31,11 +31,11 @@ Sweet N Fun is a Confectionary Manufacturer that specializes in lollipops. A mod
 
 <strong>Screenshots</strong>
 
-[homepage]('https://git.generalassemb.ly/413x-pk/Proj2/blob/branched-start/public/images/screenshots/homepage%20of%20candycrud.png')
+<a href='https://git.generalassemb.ly/413x-pk/Proj2/blob/branched-start/public/images/screenshots/homepage%20of%20candycrud.png'>[homepage]</a>
 
-[Products Page]('https://git.generalassemb.ly/413x-pk/Proj2/blob/branched-start/public/images/screenshots/productspage%20of%20candycrud.png')
+<a href='https://git.generalassemb.ly/413x-pk/Proj2/blob/branched-start/public/images/screenshots/productspage%20of%20candycrud.png'>[Products Page]</a>
 
-[Register Page]('https://git.generalassemb.ly/413x-pk/Proj2/blob/branched-start/public/images/screenshots/registerpage%20of%20candycrud.png')
+<a href='https://git.generalassemb.ly/413x-pk/Proj2/blob/branched-start/public/images/screenshots/registerpage%20of%20candycrud.png'>[Register Page]</a>
 
 <hr/>
 
