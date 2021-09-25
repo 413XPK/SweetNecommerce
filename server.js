@@ -10,6 +10,8 @@ var passport = require('passport');
 var logger = require('morgan');
 var methodOverride = require('method-override');
 const mongoose = require('mongoose')
+const cors = require('cors');
+
 
 require('dotenv').config();
 
@@ -56,6 +58,8 @@ app.use(function (req, res, next) {
   res.locals.user = req.user;
   next();
 });
+app.use(cors())
+
 
 
 app.use('/', indexRouter);

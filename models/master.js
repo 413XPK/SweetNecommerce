@@ -5,25 +5,37 @@ const Schema = mongoose.Schema
 const productSchema = new Schema({
     name: String,
     product_ID: {type: Schema.Types.ObjectId, ref: 'ProdID'},
-    product_type: {type: String, enum: ['Krazi Twist', 'Sweet Whirls', 'Fancy Sticks', 'Gourmet Jelly RG', 'Jawbreakers', 'Mini Sticks', 'Joy Pops', 'Display Stands' ]},
-    quantity: Number
-});
+    product_type: {type: String, enum: ['KraziTwist', 'SweetWhirls', 'FancySticks', 'GourmetJellyRG', 'Jawbreakers', 'MiniSticks', 'JoyPops', 'DispStands' ]},
+    quantity: Number,
+    img: {
+        required: true,
+        type: String,
+        default: "placeholder.jpg",
+      },    
+})
 
 const customerSchema = new Schema({
     customerID: {type: Schema.Types.ObjectId, ref: 'CusID'},
     firstName: String,
     lastName: String,
     street: String,
-    City: String,
+    city: String,
     postalCode: String,
     email: String,
+    mycart:[productSchema], 
+
+    avatar: String,
+    googleId: String,
     
     phone: String,
     companyName: String,
     companyType: String,
     fax: String,
     password: String
-})
+}, {
+    timestamps: true
+  });
+
 
 const orderSchema = new Schema({
     order_num: String,
