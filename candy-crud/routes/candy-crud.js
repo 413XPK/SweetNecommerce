@@ -3,7 +3,7 @@ var router = express.Router();
 
 const passport = require('passport');
 
-// var loginCtrl = require('../controllers/candy-crud')
+var loginCtrl = require('../controllers/candy-crud')
 
 router.get('/visitors', loginCtrl.index )
 
