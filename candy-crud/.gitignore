@@ -1,0 +1,27 @@
+.env
+
+
+# // // controllers: candy-crud
+# // async function giveItemToCart(req,res){
+    
+# //     await User.findOneAndUpdate({_id:req.params.id}, {$push:{'mycart':`<%=p.img%>`}})
+# //     user = await User.findById(req.params.id).populate('mycart');
+# //     res.render('products',{users: user})
+# // }
+
+# // async function giveItemToCart(req,res){
+# //     let users = await User.find(req.params.id).populate('mycart');
+# //         res.render('products',{users, user})
+
+# //     }
+
+# // async function giveItemToCart(req, res, next) {
+# //     let button = await document.getElementById(`${products.img}`)
+# //     let product = await document.getElementById(`${products.product_type}`)
+# //     let cart = await document.getElementById(`${placeCart}`)
+# //     console.log(products.img)
+# //     let action = await button.addEventListener('click', function(b){
+# //        user = User.findById(req.user).populate('mycart');
+# //        res.render('cart',{user, users })
+# //     })
+# // }

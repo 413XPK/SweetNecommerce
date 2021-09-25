@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit User</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class='header'>
+      <div class='logo'>
+        <a href='/'><img class='logoImg'  src='images/logo2size.png' alt='Sweet N Fun'/></a>
+      </div> 
+      <div class='directory'>
+
+        <form id='filterSub'>
+          <input type='search' id='filter-field' name='bFilter'/>
+          <input type='submit' id='filter-btn'  value='Search'/>
+        </form>
+        
+          <div class="nav">
+            <ul class="right">
+              <li>
+              <% if (user) { %>
+                <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+              <% } else { %>
+                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+              <% } %>
+              </li>
+            </ul>
+            <h4><a id ='navs' href='/register'>Register</a></h4>
+            <h4><a id ='navs' href='/products'>Products</a></h4>
+            <h4 id ='navs'>About Us</h4>
+            <h4 id ='navs'>Contact Us</h4>
+          </div>
+
+          <h4 class='cartBtn' id='cartBtn' onclick="cartDisp()">Cart</h4>
+      </div>
+
+      <div class='cart' id='cart'>
+      
+        <!-- <section></section> -->
+        
+      
+    </div>
+
+    </div>
+
+
+<h3>Edit your Information!</h3>
+<form action="/register/editUser/<%= users.id %>" method="POST">
+  First Name: <input placeholder="<%= users.firstName %>" id="inputForm" type="text" name="firstName"><br>
+  Last Name: <input placeholder="<%= users.lastName %>" id="inputForm" type="text" name="lastName"><br>
+  Street: <input placeholder="<%= users.street %>" id="inputForm" type="text" name="street"><br>
+  City: <input placeholder="<%= users.city %>" id="inputForm" type="text" name="city"><br>
+  Postal Code: <input placeholder="<%= users.postalCode %>" id="inputForm" type="text" name="postalCode"><br>
+  Email: <input placeholder="<%= users.email %>" id="inputForm" type="text" name="email"><br>
+
+  <input type="submit" value="OK">
+</form>
+
+
+    <script src='javascripts/script.js'></script>
+  </body>
+</html>

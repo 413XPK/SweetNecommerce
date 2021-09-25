@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class='header'>
+      <div class='logo'>
+        <a href='/'><img class='logoImg'  src='images/logo2size.png' alt='Sweet N Fun'/></a>
+      </div> 
+      <div class='directory'>
+
+        <form id='filterSub'>
+          <input type='search' id='filter-field' name='bFilter'/>
+          <input type='submit' id='filter-btn'  value='Search'/>
+        </form>
+        
+          <div class="nav">
+            <ul class="right" >
+              <li id='loginNav'>
+              <% if (user) { %>
+                <a href="/logout"><i class="material-icons left" id='login'>trending_flat</i><span class='words'>Log Out</span></a>
+              <% } else { %>
+                <a href="/auth/google"><i class="material-icons left" id='login'>vpn_key</i><span class='words'>Login with Google</span></a>
+              <% } %>
+              </li>
+            </ul>
+            <h4><a id ='navs' href='/register'>Register</a></h4>
+            <h4><a id ='navs' href='/products'>Products</a></h4>
+            <h4 id ='navs'>About Us</h4>
+            <h4 id ='navs'>Contact Us</h4>
+          </div>
+
+          <h4 class='cartBtn' id='cartBtn' onclick="cartDisp()">Cart</h4>
+      </div>
+
+      <div class='cart' id='cart'>
+      
+        <!-- <section></section> -->
+        
+      
+    </div>
+
+    </div>
+
+    <div class='background'>
+      <div class='container'>
+        
+      </div>
+    </div>
+
+    <div class='CarouselItems'>
+      <div class='carousel allSlides'>
+        <div class='slides fade'>
+          <img src='images/00.jpg'>
+        </div>
+
+        <div class='slides fade'>
+          <img src='images/001.jpg'>
+        </div>
+
+        <div class='slides fade'>
+          <img src='images/002.jpg'>
+        </div>
+
+      </div>
+
+      <a class='prev' onclick='plusSlides(-1)'>&#10094;</a>
+      <a class='next' onclick='plusSlides(1)'>&#10095;</a>
+
+      <div style='text-align: center;'>
+        <span class='dot' onclick='currentSlide(1)'></span>
+        <span class='dot' onclick='currentSlide(2)'></span>
+        <span class='dot' onclick='currentSlide(3)'></span>
+      </div>
+    </div>
+
+    
+
+    <div id='frontProds'>
+      <div>
+          <div class='prodHeader'> 
+          <h4 class='title' id='title' onclick='displays()'>Krazi Twist</h4>
+          </div>
+        <img class='fronts' id='fronts' src='images/fronts/1.png'>
+        
+      </div>
+      <div>
+          <div class='prodHeader'> 
+          <h4 class='title' id='title' onclick='displays()'>Sweet Whirls</h4>
+          </div>
+        <img class='fronts' id='fronts' src='images/fronts/2.jpg'>
+      </div>
+      <div>
+          <div class='prodHeader'> 
+          <h4 class='title' id='title' onclick='displays()'>Fancy Sticks</h4>
+          </div>
+        <img class='fronts' id='fronts' src='images/fronts/3.jpg'>
+      </div>
+      <div>
+          <div class='prodHeader'> 
+          <h4 class='title' id='title' onclick='displays()'>Gourmet Jelly RG</h4>
+          </div>
+        <img class='fronts' id='fronts' src='images/fronts/4.jpg'>
+      </div>
+      <div>
+          <div class='prodHeader'> 
+          <h4 class='title' id='title' onclick='displays()'> Jawbreaker</h4>
+          </div>
+        <img class='fronts' id='fronts' src='images/fronts/5.jpg'>
+      </div>
+      <div>
+          <div class='prodHeader'> 
+          <h4 class='title' id='title' onclick='displays()'>Mini Flower Sticks</h4>
+          </div>
+        <img class='fronts' id='fronts' src='images/fronts/6.jpg'>
+      </div>
+      <div>
+          <div class='prodHeader'> 
+          <h4 class='title' id='title' onclick='displays()'>Display Stands</h4>
+          </div>
+        <img class='fronts' id='fronts' src='images/fronts/7.jpg'>
+      </div>
+      
+    </div>
+
+      <main id="index-view">
+        <h1>Search List</h1>
+        <section></section>
+      </main>
+      
+    
+
+    
+
+    
+
+
+    <script src='javascripts/script.js'></script>
+  </body>
+</html>

@@ -1,0 +1,316 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  /* padding: 50px; */
+  margin:0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #016b96;
+  text-decoration: none;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: rgb(255, 238, 162); */
+}
+
+.logoImg{
+  cursor: pointer;
+}
+
+
+.directory{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(255, 208, 0);
+  padding: 20px;
+}
+
+.login{
+  margin: -100 auto;
+  
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+#navs{
+  cursor: pointer;
+}
+
+
+
+h4{
+  margin-right: 70px;
+}
+
+.carousel{
+  max-width: 100%;
+  min-width: 100%;
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+
+  -webkit-animation-name: carousel;
+  -webkit-animation-duration: 1.5s;
+  animation-name: carousel;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes carousel{
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes carousel{
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.slides{
+  display:none;
+
+}
+
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  transition: 0.5s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover{
+  background: rgba(0,0,0,0.8);
+}
+
+.dot{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6 ease;
+}
+
+.active, .dot:hover{
+  background-color: #717171;
+}
+
+
+
+#frontProds{
+  margin-top: 50px;
+  display:flex;
+  justify-content: center;
+  align-items: top, center;
+}
+
+#title{
+  cursor: pointer;
+  /* padding-left: 20%; */
+}
+
+#fronts{
+  width: 100px;
+  justify-content: center;
+  align-items: bottom;
+  display: block;
+  transition: width 0.5s ease-in-out;
+  position: absolute;
+  bottom: 20px;
+  /* visibility: hidden; */
+  /* filter: drop-shadow( 0 10px 5px #bbb); */
+}
+
+#fronts:hover{
+  width:200px;
+  z-index: 2;
+  bottom: 50px;
+
+}
+
+#fronts:not(:hover){
+  opacity: 50%;
+  transition: bottom 0.5s;
+}
+
+
+.eachProd{
+  margin: 40px;
+}
+
+#prodsForm{
+  
+  margin-top: 50px;
+  display:flex;
+  justify-content: center;
+  align-items: top;
+margin-left: 10%;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+.title2{
+  padding-left: 30%;
+  width: 180px;
+  padding-top: 25px;
+}
+
+#prods{
+  width:140px;
+  height: 190px;
+  margin: 0 55px 0 55px;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  
+}
+
+.prodHeader{
+  display: inline-flex;
+}
+
+.prodHeader button{
+  margin-left: 10px;
+  margin-top: 20%;
+  height: 30px;
+}
+
+
+
+
+.cart{
+  margin-left: 90%;
+  border: 2px solid rgb(255, 208, 0);
+  background: white;
+  width: 160px;
+  height: 690px;
+  display: inline-flex;
+  visibility: hidden;
+  position: absolute;
+
+  -webkit-animation-name: slide;
+  -webkit-animation-duration: 1.5s;
+  animation-name: slide;
+  animation-duration: 1.5s;
+}
+
+
+@-webkit-keyframes slide{
+  from {bottom: 0}
+  to {bottom: 100%}
+}
+
+@keyframes slide{
+  from {bottom: 0}
+  to {bottom: 100%}
+}
+
+
+
+
+.cartBtn{
+  cursor: pointer;
+}
+
+.background{
+  background: rgba(90, 90, 90, 0.5);
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 72.5%;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.container{
+  background: white;
+  z-index: 1;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  margin-left: 50%;
+  margin-top: 10%;
+  transform: translate(-50%);
+  
+}
+
+#index-view{
+  display: none;
+
+}
+
+
+.form{
+  align-items: center;
+  justify-content: center;
+  margin-left: 42%;
+  margin-top:100px;
+}
+
+.form input{
+  margin:10px;
+}
+
+hr{
+  width: 100px;
+  margin-left: 0px;
+}
+
+li{
+  list-style: none;
+}
+
+.regUsers{
+  margin-top: 100px;
+  margin-left: 45%;
+}
+
+#prodImgs{
+  width: 200px;
+}
+
+#loginNav{
+  margin-right: 40px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.words{
+  position: relative;
+  margin-top: -40px;
+  bottom: 5px;
+
+}
+
+#inputForm{
+  align-content: right;
+}

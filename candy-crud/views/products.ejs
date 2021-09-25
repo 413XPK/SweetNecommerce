@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class='header'>
+      <div class='logo'>
+        <a href='/'><img class='logoImg'  src='images/logo2size.png' alt='Sweet N Fun'/></a>
+      </div>  
+      <div class='directory'>
+
+        <form id='filterSub'>
+          <input type='search' id='filter-field' name='bFilter'/>
+          <input type='submit' id='filter-btn'  value='Search'/>
+        </form>
+        
+          <div class="nav">
+            <ul class="right">
+              <li id='loginNav'>
+                <% if (user) { %>
+                  <a href="/logout"><i class="material-icons left" id='login'>trending_flat</i><strong class='words'>Log Out</strong></a>
+                <% } else { %>
+                  <a href="/auth/google"><i class="material-icons left" id='login'>vpn_key</i><strong class='words'>Login with Google</strong></a>
+                <% } %>
+                </li>
+              </ul>
+            <h4><a id ='navs' href='/register'>Register</a></h4>
+            <h4><a id ='navs' href='/products'>Products</a></h4>
+            <h4>About Us</h4>
+            <h4>Contact Us</h4>
+          </div>
+
+          <h4 class='cartBtn' id='cartBtn' onclick="cartDisp()">Cart</h4>
+      </div>
+      <div class='cart' id='cart'>
+      
+        <ul id='placeCart'>
+            <% user.mycart.forEach(function(p) { %>
+              <h4><%= p.name %></h4> <br/> <span><%= p.img %></span>
+            <% }) %>
+            
+        </ul>
+      
+    </div>
+    </div>
+
+
+
+    
+      <form  action='/products' id='prodsForm' method='POST' >
+          <% products.forEach(function(p){ %>
+                <li class='eachProd' id='<%=p.product_type%>'>
+                    <div class='topHead'>
+                        <h3><%= p.name %></h3>
+                        <!-- <script>console.log(`<%=p.img%>`);</script> -->
+                        <button id="<%=p.img%>">+cart</button>
+                    </div>
+                    <img id='prodImgs'src='/images/prods/<%=p.img%>' alt='<%=p.img%>'/>
+                </li>
+            <% }) %>
+        </form>
+   
+
+      
+      
+      <main id="index-view">
+        <h1>Search List</h1>
+        <section></section>
+      </main>
+      
+    
+
+    
+    
+
+
+    <script src='javascripts/script.js'></script>
+  </body>
+</html>
