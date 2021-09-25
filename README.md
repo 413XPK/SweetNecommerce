@@ -44,4 +44,18 @@ Sweet N Fun is a Confectionary Manufacturer that specializes in lollipops. A mod
 7) Node Express
 8) Google OAuth
 
+<hr/>
+
 <strong>Get Started</strong>
+
+<hr/>
+
+<strong>Next Steps</strong>
+
+Further Developments to the browser-based app:
+1) apply item to cart and go to checkout
+2) implement maps with marks
+3) have only the admin see the registered users list
+4) Login unique to the website, and option to login with Google
+5) develop other web pages and improve the look and feel.
+
