@@ -31,6 +31,7 @@ Sweet N Fun is a Confectionary Manufacturer that specializes in lollipops. A mod
 
 <strong>Screenshots</strong>
 
+<a href='https://git.generalassemb.ly/413x-pk/Proj2/tree/master/candy-crud/public/images/screenshots'></a>
 <hr/>
 
 <strong>Technologies Used:</strong>
@@ -41,5 +42,6 @@ Sweet N Fun is a Confectionary Manufacturer that specializes in lollipops. A mod
 5) Mongoose
 6) NodeJS
 7) Node Express
+8) Google OAuth
 
 <strong>Get Started</strong>
